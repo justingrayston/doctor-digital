@@ -35,12 +35,14 @@ git clone https://github.com/rohan-m/doctor-digital.git
 ```
 ##### Enter edge directory
 ```
-cd edge/
+cd doctor-digital/edge/
 ```
 ##### Install gulp 
 ```
 npm install --global gulp-cli
 ```
+If you run into permission issues, try `sudo npm install --global gulp-cli`
+
 ##### Pull node modules
 ```
 npm install
@@ -59,7 +61,8 @@ This will interactively prompt you for following details, and will then create /
 #### Install dialogflow components
 ##### Pre-requisites
 ###### Dialogflow account(https://dialogflow.com)
-
+*Click on `Go to console`
+*Sign-in with your google account
 ##### Create a new agent
 ##### Import zip
 + Go to settings of the agent
@@ -75,15 +78,17 @@ This will interactively prompt you for following details, and will then create /
 + Click on Google Assistant `Integration Settings`
 + You will find `TEST` and `MANAGE ASSISTANT APP`
 + First click `MANAGE ASSISTANT APP` to configure the assistant
-+ You will visit Actions on Google information page where you find App Information Edit
-+ Add Assistant name and some invocation(like `Connect to Digital Health` or `Connect to Doctor Digital`) that you will use to invoke the assistant
-+ You can also add other info and images
-+ Save the changes
-+ Back to Dialogflow page click `TEST`
++ [Optional] You will visit Actions on Google information page where you find App Information Edit
++ [Optional] Add Assistant name and some invocation(like `Connect to Digital Health` or `Connect to Doctor Digital`) that you will use to invoke the assistant
++ [Optional] You can also add other info and images
++ [Optional] Save the changes
++ Try `Test Draft` or Back to Dialogflow page click `TEST`
 + You will visit Actions on Google simulator page
 + Please make sure that testing on device is enabled, which is the found at the first icon in the top right corner of the page
 
 ## Usage Steps
+Try the following on the actions simulator or your Google assistant app on your phone
+
 + Start with saying `Connect to Digital Health` or `Talk to Digital health` or any other invocations that may be set
 + It will ask for your phone number - 669 5858 is the default number to use, you can add a patient with a new number and a name and you can specify the same(additional details for creating a patient will follow soon, create a git request in the meantime, you can also create request to add additional location/places/hospitals)
 + Once you have provide your phone details there are couple of things you can do Like
