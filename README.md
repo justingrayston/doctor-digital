@@ -68,11 +68,11 @@ This will interactively prompt you for following details, and will then create /
 + Go to settings of the agent
 + Click on `Export and Import` tab
 + Select the `Import from zip`
-+ Include the zip provided in this repository
++ Include the zip provided in this repository `dialogflow/doctor-digital-health.zip`
 ##### Modify fulfilment
 + Click on `Fulfilment`
-+ Change the Webhook url to include the Edge organisation, environment and the API key of the api ai connector app
-+ You can find the API key in the developer app `apiAiApp` which will be created as a part of installing edge components
++ Change the Webhook url to include the Edge organisation, environment and the API key of the api ai connector app `https://{org}-{env}.apigee.net/api/ai/connector/fhir?apikey={apiAiApp_consumerkey}`
++ Developer app `apiAiApp` got created in your org by the previous step, copy the consumer key
 ##### Add Integrations
 + Click on `Integrations`
 + Click on Google Assistant `Integration Settings`
