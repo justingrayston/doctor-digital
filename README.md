@@ -61,8 +61,8 @@ This will interactively prompt you for following details, and will then create /
 #### Install dialogflow components
 ##### Pre-requisites
 ###### Dialogflow account(https://dialogflow.com)
-*Click on `Go to console`
-*Sign-in with your google account
++ Click on `Go to console`
++ Sign-in with your google account
 ##### Create a new agent
 ##### Import zip
 + Go to settings of the agent
