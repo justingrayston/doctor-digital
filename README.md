@@ -26,7 +26,7 @@ These are modules which convert user requests to actionable data
 #### Install edge componenets
 ##### Pre-requisites
 ###### Apigee edge account (https://enterprise.apigee.com)
-###### node.js 
+###### node.js (https://nodejs.org/en/download/)
 ###### npm
 
 ##### Clone the repository
@@ -64,6 +64,7 @@ This will interactively prompt you for following details, and will then create /
 + Click on `Go to console`
 + Sign-in with your google account
 ##### Create a new agent
+Before uploading the zip, please create a new agent, which is inturn assigned to a google project(default is to create a new one)
 ##### Import zip
 + Go to settings of the agent
 + Click on `Export and Import` tab
@@ -76,15 +77,18 @@ This will interactively prompt you for following details, and will then create /
 ##### Add Integrations
 + Click on `Integrations`
 + Click on Google Assistant `Integration Settings`
-+ You will find `TEST` and `MANAGE ASSISTANT APP`
-+ First click `MANAGE ASSISTANT APP` to configure the assistant
-+ [Optional] You will visit Actions on Google information page where you find App Information Edit
-+ [Optional] Add Assistant name and some invocation(like `Connect to Digital Health` or `Connect to Doctor Digital`) that you will use to invoke the assistant
-+ [Optional] You can also add other info and images
-+ [Optional] Save the changes
-+ Try `Test Draft` or Back to Dialogflow page click `TEST`
++ You will find `TEST` and `MANAGE ASSISTANT APP`, click on `TEST` to start testing right away. Find the [optional] section here to add more details to the application like name, voice, other innvocations, 
 + You will visit Actions on Google simulator page
 + Please make sure that testing on device is enabled, which is the found at the first icon in the top right corner of the page
++ [Optional] ----
++ Click on `MANAGE ASSISTANT APP` to configure the assistant
++ You will visit Actions on Google information page.
++ You find `App Information`. Click on it and click `Edit`. 
++ Click on `Assistant app name` to change its name.
++ Click on `Details`, you will find introduction, app voice, descriptions. You can fill them(its optional). In this same section you will find same invocations, ignore the existing ones, you can add upto 5 invocations(like `Connect to Digital Health` or `Connect to Doctor Digital`). Additionally you can also add images and other minute details.
++ Save the changes
++ Try `Test Draft` or Back to Dialogflow page click `TEST`
++ [Optional] ----
 
 ## Usage Steps
 Try the following on the actions simulator or your Google assistant app on your phone
