@@ -24,10 +24,14 @@ These are modules which convert user requests to actionable data
 
 
 #### Install edge componenets
-##### Pre-requisites
-###### Apigee edge account (https://enterprise.apigee.com)
-###### node.js (https://nodejs.org/en/download/)
-###### npm
+#### Pre-requisites
+##### Apigee edge account (https://enterprise.apigee.com)
+##### node.js and npm
++ https://nodejs.org/en/download/
++ or 
++ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash 
++ nvm install --lts
+
 
 ##### Clone the repository
 ```
