@@ -88,7 +88,7 @@ Before uploading the zip, please create a new agent, which is inturn assigned to
 + You will find `TEST` and `MANAGE ASSISTANT APP`, click on `TEST` to start testing right away. Find the [optional] section here to add more details to the application like name, voice, other innvocations, 
 + You will visit Actions on Google simulator page
 + Please make sure that testing on device is enabled, which is the found at the first icon in the top right corner of the page
-+ [Optional] ----
++ [Optional start] ----
 + Click on `MANAGE ASSISTANT APP` to configure the assistant
 + You will visit Actions on Google information page.
 + You find `App Information`. Click on it and click `Edit`. 
@@ -96,13 +96,13 @@ Before uploading the zip, please create a new agent, which is inturn assigned to
 + Click on `Details`, you will find introduction, app voice, descriptions. You can fill them(its optional). In this same section you will find same invocations, ignore the existing ones, you can add upto 5 invocations(like `Connect to Digital Health` or `Connect to Doctor Digital`). Additionally you can also add images and other minute details.
 + Save the changes
 + Try `Test Draft` or Back to Dialogflow page click `TEST`
-+ [Optional] ----
++ [Optional end] ----
 
 ## Usage Steps
 Try the following on the actions simulator or your Google assistant app on your phone
 
 + Start with saying `Connect to Digital Health` or `Talk to Digital health` or any other invocations that may be set
-+ It will ask for your phone number - 669 5858 is the default number to use, you can add a patient with a new number and a name and you can specify the same(additional details for creating a patient will follow soon, create a git request in the meantime, you can also create request to add additional location/places/hospitals)
++ It will ask for your phone number - 669 5858 is the default number to use, you can add a patient with a new number and a name and you can specify the same(to create a patient record and clinic location record find below optional section)
 + Once you have provide your phone details there are couple of things you can do Like
   + Get nearby clinic
   + Show my appointments - then delete my appointments 
@@ -110,4 +110,37 @@ Try the following on the actions simulator or your Google assistant app on your 
   + Get wait time at the clinic -works only when you have got the clinic info
 + The assistant will end the conversation after a successful booking or deletion of an appointment, you may have to reconnect to list the appointment
 + There is a slight delay in listing the appointment as the data in the FHIR server is reflect after a few seconds.
++ [Optional start] ----
++ Please note
++ While creating a patient record, make sure that the phone number you add is unique among your peers and is pronounceable easily for demo purpose :)
+```
+curl -X POST \
+  http://rmahalank1-eval-test.apigee.net/digital/health/admin/Patient \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+    "given_name": "Rohan",
+    "family_name": "M",
+    "phone_number": "6694747"
+  }'
+```
++ Please note
++ Fill in complete details to the accurate, especially the latitude and longitude as they are used to determine the clinics near to you.
+```
+curl -X POST \
+  http://rmahalank1-eval-test.apigee.net/digital/health/admin/Location \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+    "hospital_name":"Digital University Medical Center",
+    "addr_line":"Central Park",
+    "city":"Bangalore",
+    "state":"KA",
+    "postal_code":"560033",
+    "country":"IN",
+    "lat":"12.994261",
+    "long":"77.660916"
+  }'
 
+```
++ [Optional end] ----
