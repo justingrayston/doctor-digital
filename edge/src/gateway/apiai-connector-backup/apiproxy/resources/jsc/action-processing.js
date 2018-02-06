@@ -68,7 +68,7 @@ if (action === "appointment.book.confirm") {
   var clinic = body.result.contexts.find(function (element) {
     return (element.name = 'clinic' && element.parameters.clinicId);
   }).parameters;
-  path += "Appointment/" + patientId;
+  path += "Appointment/" + patient.patientId;
   serviceCalloutFlag = true;
   verb = "PUT";
   var date = new Date();
