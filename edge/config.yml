@@ -108,12 +108,13 @@ resources:
       type: proxy
       items:
       - name: apiai-connector
+      - name: apiai-connector-backup
 
     - name: apiaiProducts
       type: product
       items:
       - name: apiaiproduct
-        payload: '{"approvalType":"auto","displayName":"api.ai connector product","name":"apiaiConnectorProduct","environments":["{{ env }}"],"proxies": ["apiai-connector"],"apiResources":["/","/**"]}'
+        payload: '{"approvalType":"auto","displayName":"api.ai connector product","name":"apiaiConnectorProduct","environments":["{{ env }}"],"proxies": ["apiai-connector","apiai-connector-backup"],"apiResources":["/","/**"]}'
 
     - name: apiaideveloperApps
       type: app
